@@ -21,12 +21,10 @@ function Footer() {
         <div className="footer__content--left">
           <div className="footer__content__paragraph">
             <p>
-              Built by JONAS SCHMEDTMANN for his online course{"  "}
-              <span className="list__item"> ADVANCED CSS AND SASS </span>.
-              Copyright © by Jonas Schmedtmann. You are 100% allowed to use this
-              webpage for both personal and commercial use, but NOT to claim it
-              as your own design. A credit to the original author, Jonas
-              Schmedtmann, is of course highly appreciated!
+              Copyright © by MUHANNAD HAMMADA. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Voluptatibus laudantium magni
+              provident nam saepe ipsam, eaque ut deleniti sint, maiores
+              veritatis non iure reprehenderit. Aut ad itaque alias vel aliquam.
             </p>
           </div>
         </div>
