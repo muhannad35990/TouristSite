@@ -1,0 +1,135 @@
+.header {
+  height: 95vh;
+
+  background-image: linear-gradient(
+      to right bottom,
+      hsla(111, 55%, 64%, 0.8),
+      hsla(160, 64%, 43%, 0.8)
+    ),
+    url(../../img/hero.jpg);
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  &__content {
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__maintitle {
+    font-size: 6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $color-white;
+    letter-spacing: 3.5rem;
+    animation: animateToRight 1s ease-out;
+    @include respond(phone) {
+      font-size: 5rem;
+      letter-spacing: 1rem;
+    }
+  }
+  &__subtitle {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $color-white;
+    letter-spacing: 1.9rem;
+    animation: animateToLeft 1s ease-out;
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
+  }
+}
+.logo {
+  width: 7rem;
+  margin: 3rem 3rem;
+}
+.btn {
+  margin-top: 5rem;
+  width: 30rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  animation: animateButtonEnter 1s ease-out;
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+  &:hover {
+    box-shadow: 0rem 1rem 2rem rgba($color: #000000, $alpha: 0.2);
+    transform: translateY(-3px);
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  &:focus,
+  &:active {
+    box-shadow: 0rem 1rem 1rem rgba($color: #000000, $alpha: 0.2);
+    transform: translateY(-1px);
+  }
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10rem;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transition: all 0.4s;
+  }
+}
+
+@keyframes animateToLeft {
+  0% {
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes animateToRight {
+  0% {
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes animateButtonEnter {
+  0% {
+    transform: translateY(5rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

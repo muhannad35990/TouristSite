@@ -1,0 +1,90 @@
+.section1 {
+  background-color: #f7f7f7;
+  padding: 20rem 0;
+  margin-top: -20vh;
+  margin-bottom: 20vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 4rem;
+    background-image: linear-gradient(
+      to right,
+      hsla(111, 55%, 64%, 0.8),
+      hsla(160, 64%, 43%, 0.8)
+    );
+    color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-align: center;
+    transition: all 0.2s;
+    &:hover {
+      text-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.2);
+      transform: scale(1.2) skewX(2deg) skewY(3deg);
+    }
+  }
+  .content {
+    display: flex;
+    padding: 4rem 4rem;
+    font-family: "Lato", sans-serif;
+    color: #777;
+
+    // animation: 2s cubic-bezier(0.694, 0, 0.335, 1) 1000ms normal forwards 1
+    //   running animateButtonEnter;
+
+    &__left {
+      flex: 0.45;
+    }
+    &__right {
+      flex: 0.55;
+      position: relative;
+    }
+    &__title {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+    &__paragraph {
+      font-size: 1.4rem;
+      margin-bottom: 3rem;
+    }
+    &__button {
+      text-decoration: none;
+      color: $color-primary;
+      padding: 0.5rem;
+      border-bottom: 1px solid $color-primary;
+      &:hover {
+        color: white;
+        background-color: $color-primary;
+      }
+    }
+  }
+}
+.image {
+  position: absolute;
+  transition: all 0.2s;
+  outline-offset: 1.5rem;
+  width: 50%;
+  &:hover {
+    transform: scale(1.2);
+    outline: 1.1rem solid #7ed56f;
+    z-index: 10;
+  }
+}
+.img1 {
+  top: 0;
+  left: 2rem;
+}
+.img2 {
+  top: 4rem;
+  right: 10rem;
+}
+.img3 {
+  top: 10rem;
+  left: 10rem;
+}

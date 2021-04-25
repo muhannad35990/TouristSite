@@ -1,0 +1,49 @@
+.cardSection {
+  height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      hsla(160, 64%, 43%, 0.8),
+      hsla(111, 55%, 64%, 0.8)
+    ),
+    url(../../img/nat-4.jpg);
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10rem;
+  padding: 40rem 5rem;
+}
+.cardsGroup {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: skewY(7deg);
+}
+.card {
+  flex: 0.25;
+  width: 15rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 3rem;
+  background-color: #f0f0f0;
+  box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.2);
+  border-radius: 3px;
+  margin: 0 2.5rem;
+  color: $color-grey-dark;
+  transition: all 0.3s;
+  text-align: center;
+  &__title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  &__content {
+    font-size: 1.2rem;
+    hyphens: auto;
+  }
+  &:hover {
+    transform: translateY(-2rem);
+  }
+}

@@ -1,0 +1,82 @@
+@import "./mixins";
+
+/* media query*/
+/*
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+
+// COLORS
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
+
+// FONT
+$default-font-size: 1.6rem;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%; //define 1rem=10px 10/16*100=62.5%
+  @include respond(tab-land) {
+    // width<1200?
+    font-size: 60%; // 1rem =9px; 9/16=56.25%
+  }
+  @include respond(tab-port) {
+    //width<900?
+    font-size: 50%; // 1rem =8px; 8/16=50%
+  }
+  @include respond(phone) {
+    //width<600?
+    font-size: 30%; // 1rem =4.8px; 4.8/16=30%
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem=12px , 12/16=75%
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: $default-font-size;
+  line-height: 1.7;
+  padding: 3rem;
+  @include respond(tab-port) {
+    //width<900?
+    padding: 0; // 1rem =8px; 8/16=50%
+  }
+}
+@import "components/Header/Header";
+@import "components/GallerySection/GallerySection";
+@import "components/CardsSection/CardsSection";
+@import "components/RotatingCards/RotatingCards";
+@import "components/Stories/Stories.scss";
+@import "components/FormSection/FormSection";
+@import "components/Footer/Footer";
+@import "components/PopupNavigation/PopupNavigation";
+@import "components/Dialog/Dialog";

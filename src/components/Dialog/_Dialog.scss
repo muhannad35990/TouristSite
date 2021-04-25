@@ -1,0 +1,94 @@
+.dialog {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+  &:target &__content {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  &__content {
+    display: flex;
+    position: absolute;
+    width: 75%;
+    height: 50rem;
+    background-color: white;
+    box-shadow: 0rem 2rem 4rem rgba($color: #000000, $alpha: 0.2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    border-radius: 3px;
+    transition: all 0.3s 0.2s;
+  }
+  &__left {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+  &__right {
+    flex: 2;
+    padding: 4rem 6rem;
+    position: relative;
+  }
+  &__img {
+    width: 100%;
+    height: 50%;
+  }
+  &__text {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid $color-grey-light-1;
+    hyphens: auto;
+    color: $color-grey-dark-2;
+  }
+}
+.heading {
+  &-teriary {
+    text-transform: uppercase;
+    color: $color-grey-dark-2;
+  }
+  &-secondary {
+    display: inline-block;
+    margin-bottom: 2rem;
+    background-image: linear-gradient(
+      to right,
+      hsla(111, 55%, 64%, 0.8),
+      hsla(160, 64%, 43%, 0.8)
+    );
+    color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-align: center;
+    transition: all 0.2s;
+    &:hover {
+      text-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.2);
+      transform: scale(1.2) skewX(2deg) skewY(3deg);
+    }
+  }
+}
+.close-btn {
+  font-size: 3rem;
+  text-decoration: none;
+  color: $color-grey-dark-3;
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
+  line-height: 1;
+  &:hover {
+    color: $color-primary;
+  }
+}
