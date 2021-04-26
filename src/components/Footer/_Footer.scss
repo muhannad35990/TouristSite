@@ -11,6 +11,9 @@
   &__content {
     display: flex;
     margin-bottom: 10rem;
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
     &__navigation {
       padding-top: 2rem;
       border-top: 1px solid $color-grey-dark-2;
@@ -21,6 +24,9 @@
       flex: 1;
       display: flex;
       justify-content: center;
+      @include respond(tab-port) {
+        margin-bottom: 5rem;
+      }
     }
     &--left {
       flex: 1;

@@ -1,10 +1,13 @@
 .Rotatecontainer {
-  padding: 20rem 0;
+  padding: 30rem 0;
   margin-top: -20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include respond(tab-port) {
+    padding: 40rem 0;
+  }
   &__title {
     display: inline-block;
     margin-bottom: 4rem;
@@ -27,9 +30,13 @@
 }
 .cardsContainer {
   display: flex;
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
 }
 .rotatecard {
   perspective: 150rem;
+  margin-bottom: 4rem;
   &__only {
     font-size: 1.5rem;
     font-weight: 200 !important;
@@ -186,6 +193,40 @@
     font-size: 1.5rem;
     justify-items: start;
   }
+
+  @include respond(tab-port) {
+    height: auto;
+    border-radius: 3px 3px 0 0;
+    background-color: #ffffff;
+    box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.2);
+    &__side {
+      position: relative;
+      height: auto;
+      margin: 0;
+      box-shadow: none;
+      &--back {
+        height: auto;
+        transform: rotateY(0);
+        position: relative;
+        padding-top: 2rem;
+        border-radius: 0 0 3px 3px;
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+    &:hover &__side--back {
+      transform: rotateY(0);
+    }
+
+    &__price {
+      font-size: 5rem;
+    }
+    &__details {
+      padding: 1rem;
+    }
+  }
 }
 
 .button {
@@ -201,6 +242,11 @@
   align-self: center;
   margin-bottom: 10rem;
   animation: animateButtonEnter 1s ease-out;
+  @include respond(tab-port) {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+  }
   &--white {
     background-color: $color-white;
     color: $color-grey-dark;

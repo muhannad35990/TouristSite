@@ -22,7 +22,7 @@ $breakpoint argument choices:
 @mixin respond($breakpoint) {
   @if $breakpoint==phone {
     @media (max-width: 37.5em) {
-      //600px for em=16px by default and the user can change it so use em to be relative
+      //600px for em=16px by default and the user can change it, so use em to be relative
       @content;
     }
   }

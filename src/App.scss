@@ -65,7 +65,7 @@ body {
   font-weight: 400;
   font-size: $default-font-size;
   line-height: 1.7;
-  padding: 3rem;
+  // padding: 3rem;
   @include respond(tab-port) {
     //width<900?
     padding: 0; // 1rem =8px; 8/16=50%

@@ -1,5 +1,4 @@
 .cardSection {
-  height: 100vh;
   background-image: linear-gradient(
       to right bottom,
       hsla(160, 64%, 43%, 0.8),
@@ -8,8 +7,8 @@
     url(../../img/nat-4.jpg);
   background-size: cover;
   transform: skewY(-7deg);
-  margin-top: -10rem;
-  padding: 40rem 5rem;
+  margin-top: -20rem;
+  padding: 20rem 5rem;
 }
 .cardsGroup {
   height: 100%;
@@ -17,6 +16,9 @@
   align-items: center;
   justify-content: center;
   transform: skewY(7deg);
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
 }
 .card {
   flex: 0.25;
@@ -34,6 +36,11 @@
   color: $color-grey-dark;
   transition: all 0.3s;
   text-align: center;
+  @include respond(tab-port) {
+    margin-bottom: 5rem;
+    width: 30rem;
+    padding: 6rem 1rem;
+  }
   &__title {
     font-size: 1.6rem;
     margin-bottom: 1rem;

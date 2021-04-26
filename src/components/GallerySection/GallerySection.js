@@ -34,27 +34,9 @@ function GallerySection() {
             </a>
           </div>
           <div className="content__right">
-            <img
-              data-aos="zoom-out"
-              data-aos-delay="500"
-              src={nat1}
-              alt="img"
-              className="image img1"
-            />
-            <img
-              data-aos="zoom-out"
-              data-aos-delay="1000"
-              src={nat2}
-              alt="img"
-              className="image img2"
-            />
-            <img
-              data-aos="zoom-out"
-              data-aos-delay="1500"
-              src={nat3}
-              alt="img"
-              className="image img3"
-            />
+            <img src={nat1} alt="img" className="image img1" />
+            <img src={nat2} alt="img" className="image img2" />
+            <img src={nat3} alt="img" className="image img3" />
           </div>
         </div>
       </div>
